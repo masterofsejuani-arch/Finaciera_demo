@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RapidAuto | Créditos para tu auto</title>
+  <meta name="description" content="RapidAuto es una financiera de créditos automotrices. Consulta tu saldo, paga tu mensualidad o solicita tu crédito.">
+  <style>
+    :root {
+      --azul: #0b3d91;
+      --azul-oscuro: #072a66;
+      --naranja: #c2410c;
+      --gris: #f3f4f6;
+      --texto: #1f2937;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--texto);
+      line-height: 1.5;
+    }
+    a { color: var(--azul); }
+    .skip-link {
+      position: absolute; left: -999px; top: 0;
+      background: #fff; color: var(--azul); padding: 8px 12px;
+    }
+    .skip-link:focus { left: 0; z-index: 10; }
+    header {
+      background: var(--azul);
+      color: #fff;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: .5px; }
+    .logo span { color: #fdba74; }
+    nav ul { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; flex-wrap: wrap; }
+    nav a { color: #fff; text-decoration: none; }
+    nav a:hover, nav a:focus { text-decoration: underline; }
+    .hero {
+      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-oscuro) 100%);
+      color: #fff;
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.2rem; margin: 0 0 12px; }
+    .hero p { max-width: 640px; margin: 0 auto 24px; font-size: 1.1rem; }
+    .btn {
+      display: inline-block;
+      background: var(--naranja);
+      color: #fff;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 0;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn:hover, .btn:focus { background: #9a3412; }
+    main section { padding: 48px 24px; max-width: 1000px; margin: 0 auto; }
+    h2 { color: var(--azul); margin-top: 0; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--gris);
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .card h3 { margin-top: 0; color: var(--azul-oscuro); }
+    .ayuda { background: var(--gris); max-width: none; }
+    .ayuda > div { max-width: 1000px; margin: 0 auto; }
+    footer {
+      background: var(--azul-oscuro);
+      color: #fff;
+      padding: 24px;
+      text-align: center;
+      font-size: .9rem;
+    }
+    :focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header>
+    <div class="logo">Rapid<span>Auto</span></div>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#ayuda">Ayuda</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <div class="hero">
+      <h1>Estrena tu auto con un crédito a tu medida</h1>
+      <p>Financiamos tu auto nuevo o seminuevo. Consulta tu cuenta, paga tu mensualidad o platica con un asesor sin salir de esta página.</p>
+      <button class="btn" type="button" id="abrir-chat">Hablar con un asesor</button>
+    </div>
+
+    <section id="servicios" aria-labelledby="titulo-servicios">
+      <h2 id="titulo-servicios">¿En qué te podemos ayudar?</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Solicitar un crédito</h3>
+          <p>Conoce los requisitos, el enganche y los plazos disponibles para financiar tu auto.</p>
+        </article>
+        <article class="card">
+          <h3>Consultar mi saldo</h3>
+          <p>Revisa tu estado de cuenta, tu próxima mensualidad y tu fecha de pago.</p>
+        </article>
+        <article class="card">
+          <h3>Pagos y convenios</h3>
+          <p>Si tienes un pago pendiente, te ayudamos a ponerte al corriente o a reestructurar tu crédito.</p>
+        </article>
+        <article class="card">
+          <h3>Liquidar mi crédito</h3>
+          <p>Solicita tu carta de liquidación o de no adeudo y conoce cómo hacer pagos adelantados.</p>
+        </article>
+        <article class="card">
+          <h3>Seguro del auto</h3>
+          <p>Consulta la vigencia de tu póliza, renueva tu seguro o reporta un siniestro.</p>
+        </article>
+        <article class="card">
+          <h3>Aclaraciones</h3>
+          <p>¿No reconoces un cargo o tienes una inconformidad? Cuéntanos y lo revisamos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="ayuda" class="ayuda" aria-labelledby="titulo-ayuda">
+      <div>
+        <h2 id="titulo-ayuda">Atención por chat</h2>
+        <p>Usa el botón de chat que aparece en la esquina inferior de la pantalla para escribirle a un asesor. Cuéntanos tu situación con tus propias palabras.</p>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <p>Horario de atención por chat: lunes a viernes, de 9:00 a 18:00 h.</p>
+      <p>Esta página es una demostración. RapidAuto y sus servicios aquí descritos son ilustrativos.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 RapidAuto. Sitio de demostración.</p>
+  </footer>
+
+  <!-- Genesys Cloud Web Messaging -->
+  <script type="text/javascript" charset="utf-8">
+    (function (g, e, n, es, ys) {
+      g['_genesysJs'] = e;
+      g[e] = g[e] || function () {
+        (g[e].q = g[e].q || []).push(arguments)
+      };
+      g[e].t = 1 * new Date();
+      g[e].c = es;
+      ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+    })(window, 'Genesys', 'https://apps.mxc1.pure.cloud/genesys-bootstrap/genesys.min.js', {
+      environment: 'prod-mxc1',
+      deploymentId: '6409c1f7-183d-4a78-a50a-3790ac32f702'
+    });
+  </script>
+
+  <!-- El botón del hero abre el Messenger cuando está listo -->
+  <script>
+    document.getElementById('abrir-chat').addEventListener('click', function () {
+      if (typeof Genesys === 'function') {
+        Genesys('command', 'Messenger.open', {},
+          function () {},
+          function () { alert('El chat aún se está cargando. Intenta de nuevo en unos segundos.'); }
+        );
+      }
+    });
+  </script>
+</body>
+</html>
